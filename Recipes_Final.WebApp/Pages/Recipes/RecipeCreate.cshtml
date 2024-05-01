@@ -1,0 +1,61 @@
+﻿//@page
+@model Recipes_Final.WebApp.Pages.Recipes.RecipeCreateModel
+@{
+}
+<form method="post">
+   <div class="form-group">
+         <input type="hidden" name="id" class="form-control" asp-for="@Model.Recipe.Id">
+    </div>
+
+    <div>
+        <label>New Recipe Title</label>
+        <input type="text" name="title" class="form-control" placeholder="Recipe Title" asp-for="@Model.Recipe.Title">
+    </div>
+
+   <div class="form-group">
+        <label>Recipe Author</label>
+        <input type="hidden" name="id_user" class="form-control" readonly value="@Model.User.Id"  asp-for="@Model.User.Id">
+    </div>
+
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select name="id_category" id="category" class="form-control" asp-for="@Model.Category.Name">
+            <option value="">Select a Category</option>
+            @foreach (var category in Model.Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Preparation Time in minutes</label>
+        <input type="minute" min="0" name="prep_time"  id="preparationtime" class="form-control" placeholder="Minutes" asp-for="@Model.Recipe.PreparationTime">
+    </div>
+
+    <div class="form-group">
+        <label>Preparation Method</label>
+        <textarea name="prep_method" id="preparationmethod" class="form-control" rows="4" placeholder="Preparation Method" asp-for="@Model.Recipe.PreparationMethod"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="difficulty">Difficulty</label>
+        <select name="id_difficulty" id="difficulty" class="form-control" asp-for="@Model.Difficulty.Name">
+            <option value="">Select a Difficulty</option>
+            @foreach (var difficulty in Model.Difficulties)
+            {
+                <option value="@difficulty.Id">@difficulty.Name</option>
+            }
+        </select>
+    </div>
+
+    <p></p>
+    <div class="form-check">
+        <input name="isApproved" id="Aprooved" type="checkbox" class="form-check-input">
+        <label for="approved" class="form-check-label">Appoved</label>
+    </div>
+
+
+    <br />
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

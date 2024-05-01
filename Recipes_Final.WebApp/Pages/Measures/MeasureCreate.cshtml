@@ -1,0 +1,17 @@
+﻿//@page
+@model Recipes_Final.WebApp.Pages.Measures.MeasuresCreateModel
+@{
+}
+</br>
+</br>
+</br>
+
+<form method="post">
+    <div class="form-group">
+        <label>New Measure </label>
+        <input type="text" name="name" class="form-control" placeholder="Measure type" asp-for="@Model.Measure.Name">
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

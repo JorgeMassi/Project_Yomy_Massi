@@ -1,0 +1,31 @@
+﻿//@page
+@model Recipes_Final.WebApp.Pages.Measures.MeasuresModel
+@{
+}
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Measure Id</th>
+            <th scope="col">Measure Unit</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var measure in Model.Measures)
+        {
+            <tr>
+                <th scope="row">@measure.Id</th>
+                <td>@measure.Name</td>
+                <td>
+                    <a style="text-decoration:none" class="fa-solid fa-pencil" asp-area="" asp-page="/Measures/MeasureUpdate" asp-route-id="@measure.Id"></a> / @*Como poner los lapicitos y el bucket trash *@
+                    <a style="text-decoration:none" class="fa-solid fa-trash" asp-area="" asp-page="/Measures/MeasureDelete" asp-route-id="@measure.Id"></a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p><a asp-page="/Measures/MeasureCreate">Create a new Measure unit</a></p>

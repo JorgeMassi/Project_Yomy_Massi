@@ -1,0 +1,16 @@
+﻿@page
+@model Recipes_Final.WebApp.Pages.Difficulties.DifficultyCreateModel
+@{
+}
+
+    //
+<form method="post">
+    <div class="form-group">
+        <label>New Difficulty </label>
+        <input type="text" name="name" class="form-control" placeholder="Difficulty name" asp-for="@Model.Difficulty.Name">
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+

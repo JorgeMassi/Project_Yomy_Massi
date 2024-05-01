@@ -1,0 +1,64 @@
+﻿//@page
+@model Recipes_Final.WebApp.Pages.Recipes.RecipeIngredientsUpdateModel
+@{
+}
+
+<form method="post">
+    @*<div class="form-group">
+    <input type="hidden" name="id_recipe" class=" align-content-xxl-center" value="@Model.Recipe.Id" readonly asp-for="@Model.Recipe.Id">
+    </div>*@
+    <input type="hidden" name="ingline_id" class="form-control" asp-for="@Model.IngredientLine.Id">
+    <input type="hidden" name="id_recipe" class="form-control" asp-for="@Model.IngredientLine.Recipe.Id">
+
+
+    <div class="form-group">
+        <label for="ingredient">Ingredient</label>
+        <select name="id_ingredient" id="ingredient" class="form-control" asp-for="@Model.Ingredient.Name">
+            <option value="">Select an Ingredient</option>
+            @foreach (var ingredient in Model.Ingredients)
+            {
+                <option value="@ingredient.Id">@ingredient.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Ingredient´s Quantity</label>
+        <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantity" asp-for="@Model.IngredientLine.Quantity">
+    </div>
+
+    <div class="form-group">
+        <label for="measure">Measure</label>
+        <select name="id_measure" id="measure" class="form-control" asp-for="@Model.Measure.Id">
+            <option value="">What´s the measure unit</option>
+            @foreach (var measure in Model.Measures)
+            {
+                <option value="@measure.Id">@measure.Name</option>
+            }
+        </select>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Add Ingredient</button>
+</form>
+
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Ingredient</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Measure</th>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model.IngredientLines)
+        {
+            <tr>
+                <td>@item.Ingredient.Name</td>
+                <td>@item.Quantity</td>
+                <td>@item.Measure.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

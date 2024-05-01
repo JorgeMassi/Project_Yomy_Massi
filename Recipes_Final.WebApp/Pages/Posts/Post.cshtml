@@ -1,0 +1,27 @@
+﻿//@page
+@model Recipes_Final.WebApp.Pages.Posts.PostModel
+@{
+}
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Recipe</th>
+            <th scope="col">Ratting</th>
+            <th scope="col">Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model.Posts)
+        {
+            <tr>
+                <th scope="row">@category.Id</th>
+                <td>@category.User.Username</td>
+                <td>@category.Recipes.Title</td>
+                <td>@category.Rattings</td>
+                <td>@category.Comment</td>
+            </tr>
+        }
+    </tbody>
+</table>

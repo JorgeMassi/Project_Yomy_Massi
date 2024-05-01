@@ -1,0 +1,32 @@
+﻿//@page
+@model Recipes_Final.WebApp.Pages.Ingredients.IngredientModel
+@{
+}
+</br>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Ingredient Id</th>
+            <th scope="col">Ingredient Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var ingredient in Model.Ingredients)
+        {
+            <tr>
+                <th scope="row">@ingredient.Id</th>
+                <td>@ingredient.Name</td>
+                <td>
+                    <a style="text-decoration:none" class="fa-solid fa-pencil" asp-area="" asp-page="/Ingredients/IngredientUpdate" asp-route-id="@ingredient.Id"></a> / 
+                    <a style="text-decoration:none" class="fa-solid fa-trash" asp-area="" asp-page="/Ingredients/IngredientDelete" asp-route-id="@ingredient.Id"></a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<p><a asp-page="/Ingredients/IngredientCreate">Create a new Ingredient</a></p>
+

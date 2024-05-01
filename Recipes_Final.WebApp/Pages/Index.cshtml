@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    @if (Model.User is null)
+    {
+        <h1 class="display-4">Welcome Guest</h1>
+        <i class="fa-solid fa-circle-user fa-2xl align-content-lg-center"></i>
+    }
+    else
+    {
+        <h1 class="display-4">Welcome @Model.User.Name</h1>
+        @if (Model.User.IsAdmin)
+        {
+            <div>Welcome Admin : @Model.User.Email </div>
+            <i class="fa-solid fa-user-secret fa-2xl align-content-lg-center"></i>
+           
+        }
+        else
+        {
+            <div>Welcome User : @Model.User.Email</div>
+            <i class="fa-solid fa-user-check fa-2xl align-content-lg-center"></i>
+            <br />
+        }
+    }
+</div>
+
+
+
+
+
+//

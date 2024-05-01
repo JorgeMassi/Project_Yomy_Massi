@@ -1,0 +1,83 @@
+﻿@page
+@model Recipes_Final.WebApp.Pages.Recipes.RecipeModel
+@{
+}
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Category</th>
+            <th scope="col">Preparation Time</th>
+            <th scope="col">Preparation Method</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col">Details</th>
+            <th scope="col">Is Approved</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recipe in Model.Recipes)
+        {
+            @*@if (Model.User.IsAdmin)*@
+            {
+                <tr>
+                    //<th scope="row">@recipe.Id</th>
+                    <td>@recipe.Title</td>
+                    <td>@recipe.Author.Name</td>
+                    <td>@recipe.Category.Name</td>
+                    <td>@recipe.PreparationTime</td>
+                    <td>@recipe.PreparationMethod</td>
+                    <td>@recipe.Difficulty.Name</td>
+                    <td><a style="text-decoration:none" class=" text-center" asp-area="" asp-page="/Recipes/RecipeIngredientLine" asp-route-id="@recipe.Id">See Recipe Details</a></td>
+                    <td>@recipe.IsApproved</td>
+                    <td>
+                        <a style="text-decoration:none" class="fa-solid fa-pencil" asp-area="" asp-page="/Recipes/RecipeUpdate" asp-route-id="@recipe.Id"></a> /
+                        <a style="text-decoration:none" class="fa-solid fa-trash" asp-area="" asp-page="/Recipes/RecipeDelete" asp-route-id="@recipe.Id"></a>
+                    </td>
+
+                </tr>
+            }@*else
+        {
+        @foreach (var item in Model.Recipes)
+        {
+        if (Model.User.Id == ) ;
+        }
+        }*@
+        }
+
+    </tbody>
+</table>
+
+<tr>
+    <p><a asp-page="/Recipes/RecipeCreate">Create a new Recipe</a></p>
+
+</tr>
+<br />
+
+<input type="hidden" name="id_category" class="form-control" asp-for="@Model.Recipe.Category">
+
+<br />
+<tr>
+    <a asp-area="" asp-page="/Recipes/RecipesRetrieveAllByCategory"><i class="fa fa-search"></i>Search Recipes</a>
+</tr>
+
+
+
+
+<br />
+
+
+<br />
+<br />
+<br />
+
+
+
+
+
+
+
+

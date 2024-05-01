@@ -1,0 +1,64 @@
+﻿@page
+@model Recipes_Final.WebApp.Pages.Difficulties.DifficultyModel
+@{
+}
+//
+@if (Model.User is null)
+{
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Difficulty Id</th>
+                <th scope="col">Type of difficulty</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var difficulty in Model.Difficulties)
+            {
+                <tr>
+                    <th scope="row">@difficulty.Id</th>
+                    <td>@difficulty.Name</td>
+                    <td>
+                        @*<a style="text-decoration:none"  class="fa-solid fa-pencil" asp-area="" asp-page="/Difficulties/DifficultyUpdate" asp-route-id="@difficulty.Id"></a> / @*Como poner los lapicitos y el bucket trash
+                <a style="text-decoration:none" class="fa-solid fa-trash" asp-area="" asp-page="/Difficulties/DifficultyDelete" asp-route-id="@difficulty.Id"></a>*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <br />
+}
+else
+{
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Difficulty Id</th>
+                <th scope="col">Type of difficulty</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var difficulty in Model.Difficulties)
+            {
+                <tr>
+                    <th scope="row">@difficulty.Id</th>
+                    <td>@difficulty.Name</td>
+                    <td>
+                        <a style="text-decoration:none" class="fa-solid fa-pencil" asp-area="" asp-page="/Difficulties/DifficultyUpdate" asp-route-id="@difficulty.Id"></a> /
+                        <a style="text-decoration:none" class="fa-solid fa-trash" asp-area="" asp-page="/Difficulties/DifficultyDelete" asp-route-id="@difficulty.Id"></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+   
+    @if (Model.User.IsAdmin)
+    {
+        <p><a asp-page="/Difficulties/DifficultyCreate">Create a new Difficulty</a></p>
+    }
+}

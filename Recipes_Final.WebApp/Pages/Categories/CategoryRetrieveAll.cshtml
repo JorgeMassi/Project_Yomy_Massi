@@ -1,0 +1,66 @@
+﻿@page
+@model Recipes_Final.WebApp.Pages.Categories.CategoryRetrieveAllModel
+@{
+}
+@if (Model.User is null)//
+{
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Category Id</th>
+                <th scope="col">Category Type</th>
+                <th scope="col">Actions</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var category in Model.Categories)
+            {
+                <tr>
+                    <th scope="row">@category.Id</th>
+                    <td>@category.Name</td>
+                    <td>
+                        @*<a style="text-decoration:none" class="fa-solid fa-pencil" asp-area="" asp-page="/Categories/CategoryUpdate" asp-route-id="@category.Id"></a> / @*Como poner los lapicitos y el bucket trash *@
+                        @*@<a style="text-decoration:none" class="fa-solid fa-trash" asp-area="" asp-page="/Categories/CategoryDelete" asp-route-id="@category.Id"></a>*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+}
+else
+{
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Category Id</th>
+                <th scope="col">Category Type</th>
+                <th scope="col">Actions</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model.Categories)
+            {
+                <tr>
+                    <th scope="row">@category.Id</th>
+                    <td>@category.Name</td>
+                    <td>
+                        <a style="text-decoration:none" class="fa-solid fa-pencil" asp-area="" asp-page="/Categories/CategoryUpdate" asp-route-id="@category.Id"></a> / 
+                        <a style="text-decoration:none" class="fa-solid fa-trash" asp-area="" asp-page="/Categories/CategoryDelete" asp-route-id="@category.Id"></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (Model.User.IsAdmin)
+    {
+        <p><a asp-page="/Categories/CategoryCreate">Create a new Category</a></p>
+    }
+
+}
+

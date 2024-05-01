@@ -1,0 +1,16 @@
+﻿@page 
+@model Recipes_Final.WebApp.Pages.Categories.CategoryCreateModel
+@{
+}
+//
+<form method="post">
+    <div class="form-group">
+        <label>New Category </label>
+        <input type="text" name="name" class="form-control" placeholder="Category name" asp-for="@Model.Category.Name">
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+

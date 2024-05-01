@@ -1,0 +1,90 @@
+html {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+//
+body {
+    margin-bottom: 60px;
+    background-color: cadetblue;
+    background-image: url('https://assets.bonappetit.com/photos/64fb75355d66b46cd549fcd1/16:9/w_2560%2Cc_limit/20230906-WEB-0582%2520(1).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style:none;
+}
+
+a{
+    text-decoration: none;
+    color : #ffffff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color : darkorange;
+}
+
+
+
+header {
+    position: relative;
+    
+}
+
+.navbar {
+    width : 100%;
+    height : auto;
+    max-width: auto;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;  
+
+}
+.navbar a{ 
+    font-size: 1.0rem;
+    font-weight: normal
+        
+}
+
+.navbar .btn{
+    display:flex;
+    gap: 2rem;
+    
+}
+
+.navbar  .toggle_btn{
+    color:navajowhite;
+    font-size : 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: orange;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    font-size:0.8rem;
+    font-weight: bold;
+    cursor:pointer;
+
+}
+

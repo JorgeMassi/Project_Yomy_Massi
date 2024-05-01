@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipes_Final.ConsoleApp", "Recipes_Final.ConsoleApp\Recipes_Final.ConsoleApp.csproj", "{6059A365-CFE4-4D54-B3B4-0C572811CBD2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipes_Final.Model", "Recipes_Final.Model\Recipes_Final.Model.csproj", "{03B6893B-D034-4380-BD58-1EE1B0E2BF0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipes_Final.Repository", "Recipes_Final.Repository\Recipes_Final.Repository.csproj", "{7C2A0562-490A-4F24-A59B-56D361CB4184}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipes_Final.Service", "Recipes_Final.Service\Recipes_Final.Service.csproj", "{DCBF7151-DEB9-4184-B9CA-BF5ECDAEA28A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipes_Final.WebApi", "Recipes_Final.WebApi\Recipes_Final.WebApi.csproj", "{DB1800DA-72CB-4A65-8C98-51D3345379B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipes_Final.WebApp", "Recipes_Final.WebApp\Recipes_Final.WebApp.csproj", "{A51E6BA5-90D6-47F7-AF9E-35C742CB6AD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6059A365-CFE4-4D54-B3B4-0C572811CBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6059A365-CFE4-4D54-B3B4-0C572811CBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6059A365-CFE4-4D54-B3B4-0C572811CBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6059A365-CFE4-4D54-B3B4-0C572811CBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B6893B-D034-4380-BD58-1EE1B0E2BF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B6893B-D034-4380-BD58-1EE1B0E2BF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B6893B-D034-4380-BD58-1EE1B0E2BF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B6893B-D034-4380-BD58-1EE1B0E2BF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2A0562-490A-4F24-A59B-56D361CB4184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2A0562-490A-4F24-A59B-56D361CB4184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2A0562-490A-4F24-A59B-56D361CB4184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2A0562-490A-4F24-A59B-56D361CB4184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCBF7151-DEB9-4184-B9CA-BF5ECDAEA28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCBF7151-DEB9-4184-B9CA-BF5ECDAEA28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCBF7151-DEB9-4184-B9CA-BF5ECDAEA28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCBF7151-DEB9-4184-B9CA-BF5ECDAEA28A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1800DA-72CB-4A65-8C98-51D3345379B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1800DA-72CB-4A65-8C98-51D3345379B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1800DA-72CB-4A65-8C98-51D3345379B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1800DA-72CB-4A65-8C98-51D3345379B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51E6BA5-90D6-47F7-AF9E-35C742CB6AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51E6BA5-90D6-47F7-AF9E-35C742CB6AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51E6BA5-90D6-47F7-AF9E-35C742CB6AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51E6BA5-90D6-47F7-AF9E-35C742CB6AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9E51D49-4C60-4F53-A69C-57C3C6A0D6DA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+﻿//@page "Favorite"
+@model Recipes_Final.WebApp.Pages.Favorites.FavoriteModel
+@{
+}
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            
+            <th scope="col">My Favorite Recipes</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var favorite in Model.Favorites)
+        {
+            <tr>
+                
+                <td>@favorite.Recipe.Title</td>
+
+        </tr>
+        }
+    </tbody>
+</table>
